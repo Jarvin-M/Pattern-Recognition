@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#SBATCH --time=00:35:00
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+#SBATCH --mem=8GB
+
+module load TensorFlow/1.9.0-foss-2018a-Python-3.6.4-CUDA-9.1.85
+pip install --user keras
+pip install --user matplotlib
+python 64alex.py
